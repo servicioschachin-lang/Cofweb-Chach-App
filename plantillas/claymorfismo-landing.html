@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Taza Feliz | Coffee Shop</title>
+<meta name="description" content="Taza Feliz: café de especialidad, pan del día y un espacio para quedarte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>:root{--bg:#fff0e3;--card:#ffffff;--ink:#4a2c2a;--muted:#7a524d;--a:#ff7a8a;--b:#5ccfb4;--c:#ffc857;--onb:#3a1d1b;--sh:rgba(180,90,60,.3);--pc:#c93049;--p1:#ffc2cb;--p2:#a8ecdc;--p3:#ffe29a;--hw:600;--star:#f0a000;--fh:'Fredoka',sans-serif;--fb:'Fredoka',sans-serif;--heroimg:url("https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=1600&q=80")}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+section{scroll-margin-top:6.5rem}
+[hidden]{display:none!important}
+body{margin:0;font-family:var(--fb);color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+p,blockquote,figure{margin:0}
+ul{list-style:none;margin:0;padding:0}
+h1,h2,h3{font-family:var(--fh);margin:0;color:var(--hc,var(--ink))}
+body h1,body h2,body h3{font-weight:var(--hw,700);letter-spacing:var(--hls,0)}
+.h1-s{font-size:clamp(2.4rem,6.4vw,4.5rem);line-height:1.05}
+.h2-s{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.12}
+.h3-s{font-size:1.2rem;line-height:1.25}
+.lead-s{font-size:1.12rem;color:var(--muted);max-width:34rem}
+.muted-s{color:var(--muted)}
+.stack-s>*+*{margin-top:1.1rem}
+.stack-s>.mt-s{margin-top:1.9rem}
+.mt-s{margin-top:1.9rem}
+.mt-big-s{margin-top:3.2rem}
+.flex-s{display:flex;flex-wrap:wrap;gap:.85rem;align-items:center}
+.center-s{justify-content:center;text-align:center}
+.center-s .lead-s{margin-inline:auto}
+.narrow-s{max-width:46rem;margin-inline:auto}
+.sec-s{padding:clamp(3.5rem,8vw,6.5rem) 0}
+.hero-s{padding:clamp(7.5rem,14vw,9.5rem) 0 clamp(3rem,7vw,5.5rem)}
+.head-s{max-width:36rem;margin-bottom:2.6rem}
+.head-s .lead-s{margin-top:.8rem}
+.hdr-s{position:fixed;top:0;left:0;right:0;z-index:1030;padding:.9rem 0 0}
+.nav-s{padding:.6rem 1.1rem}
+.brand-s{font-family:var(--fh);font-weight:var(--hw,700);font-size:1.3rem;display:inline-flex;align-items:center;gap:.55rem;color:var(--hc,var(--ink))}
+.nl-s{display:inline-block;padding:.4rem .15rem;font-weight:500;opacity:.88}
+.nl-s:hover,.nl-s.active{opacity:1}
+.mob-s{padding:.9rem 0 .6rem}
+.mob-s .nl-s{display:block;padding:.65rem 0}
+.navbar-collapse.show,.navbar-collapse.collapsing{padding:.8rem 0 .4rem}
+@media(min-width:992px){.navbar-nav{gap:1.6rem}}
+.burger-s{width:44px;height:44px;display:grid;place-items:center;font-size:1.6rem;cursor:pointer;color:inherit;background:none;border:0;padding:0}
+.btn-s,.btn-s2{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1.6rem;font:inherit;font-weight:600;line-height:1.2;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,color .2s}
+.card-s{overflow:hidden;padding:var(--cp,0)}
+.card-s>.card-img-s{border-radius:var(--ir,0)}
+.row>*>.card-s{height:100%}
+.cb-s{padding:1.25rem 1.35rem 1.5rem}
+.row-s{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.price-s{font-weight:700;color:var(--pc);white-space:nowrap}
+.card-img-s{aspect-ratio:4/3;object-fit:cover;width:100%}
+.hero-img-s{aspect-ratio:5/4;object-fit:cover;width:100%}
+.wide-img-s{aspect-ratio:16/8;object-fit:cover;width:100%}
+.gal-s{aspect-ratio:1;object-fit:cover;width:100%}
+.feat-s{display:flex;gap:1.1rem;align-items:flex-start}
+.icon-s{flex:none;width:52px;height:52px;display:grid;place-items:center;font-size:1.35rem}
+.lbl-s{display:block;margin-bottom:.4rem;font-weight:600}
+.field-s{margin-bottom:1.1rem}
+.input-s{font:inherit;outline:none}
+textarea.input-s{min-height:130px;resize:vertical}
+.ok-s{margin-top:1rem;font-weight:600}
+.info-li-s{display:flex;gap:.85rem;align-items:flex-start;margin-bottom:1rem}
+.info-li-s i{color:var(--ic,var(--a));font-size:1.15rem;margin-top:.15rem}
+.stars-s{color:var(--star,#f5b301);margin-bottom:.7rem;display:flex;gap:.2rem}
+.who-s{display:flex;gap:.8rem;align-items:center;margin-top:1.2rem}
+.who-s small{display:block;color:var(--muted)}
+.avatar-s{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;font-weight:700;flex:none}
+.chip-s{display:inline-flex;gap:.5rem;align-items:center;padding:.5rem 1rem;font-size:.92rem;font-weight:600}
+.social-s{width:44px;height:44px;display:inline-grid;place-items:center;font-size:1.15rem;transition:transform .2s,background .2s,color .2s}
+.card-s.cta-s{padding:clamp(2rem,5vw,3.5rem);text-align:center}
+.cta-s .lead-s{margin-inline:auto}
+.foot-s{padding:3rem 0 2.2rem}
+.foot-grid-s{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem;align-items:flex-start}
+.foot-copy-s{margin-top:2.2rem;font-size:.9rem}
+:focus-visible{outline:3px solid var(--focus,var(--a));outline-offset:3px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+:root{--cp:14px;--ir:26px}
+.nav-s{background:#fff;border-radius:34px;box-shadow:0 14px 24px -8px var(--sh),inset 0 -6px 10px rgba(0,0,0,.06),inset 0 6px 10px rgba(255,255,255,.95)}
+.card-s{background:var(--card);border-radius:36px;box-shadow:0 20px 32px -10px var(--sh),inset 0 -10px 18px rgba(0,0,0,.07),inset 0 10px 18px rgba(255,255,255,.95)}
+.frame-s{border:12px solid #fff;border-radius:44px;box-shadow:0 24px 36px -12px var(--sh)}
+.btn-s{border:0;border-radius:999px;color:var(--onb);background:var(--a);box-shadow:0 12px 20px -6px var(--sh),inset 0 -7px 12px rgba(0,0,0,.2),inset 0 7px 12px rgba(255,255,255,.4)}
+.btn-s:hover{transform:translateY(-3px) scale(1.03)}
+.btn-s2{border:0;border-radius:999px;color:var(--ink);background:#fff;box-shadow:0 12px 20px -6px var(--sh),inset 0 -7px 12px rgba(0,0,0,.08),inset 0 7px 12px rgba(255,255,255,.9)}
+.btn-s2:hover{transform:translateY(-3px) scale(1.03)}
+.input-s{width:100%;padding:.9rem 1.1rem;border:0;border-radius:20px;background:var(--bg);color:var(--ink);box-shadow:inset 0 5px 9px rgba(0,0,0,.09),inset 0 -4px 7px rgba(255,255,255,.9)}
+.input-s::placeholder{color:var(--muted);opacity:.75}
+.input-s:focus{box-shadow:inset 0 5px 9px rgba(0,0,0,.09),inset 0 -4px 7px rgba(255,255,255,.9),0 0 0 3px var(--b)}
+.social-s{border-radius:50%;background:#fff;color:var(--ink);box-shadow:0 10px 16px -6px var(--sh),inset 0 -5px 8px rgba(0,0,0,.08),inset 0 5px 8px rgba(255,255,255,.95)}
+.social-s:hover{transform:translateY(-4px) scale(1.06)}
+.icon-s{border-radius:20px;background:var(--k,var(--p1));color:var(--ink);box-shadow:0 10px 16px -6px var(--sh),inset 0 -6px 9px rgba(0,0,0,.1),inset 0 6px 9px rgba(255,255,255,.6)}
+.burger-s{border-radius:50%;background:var(--p1);box-shadow:inset 0 -4px 7px rgba(0,0,0,.1),inset 0 4px 7px rgba(255,255,255,.6)}
+.chip-s{border-radius:999px;background:#fff;box-shadow:0 8px 14px -6px var(--sh),inset 0 -4px 7px rgba(0,0,0,.07),inset 0 4px 7px rgba(255,255,255,.9)}
+.nl-s.active{background:var(--p1);border-radius:999px;padding-inline:.9rem}
+@media(min-width:992px){.navbar-nav{gap:.6rem}}
+.avatar-s{background:var(--b);color:var(--ink);box-shadow:inset 0 -4px 7px rgba(0,0,0,.12),inset 0 4px 7px rgba(255,255,255,.5)}
+.sec-alt-s{background:rgba(255,255,255,.55)}
+.card-s.cta-s{background:var(--a);color:var(--onb)}
+.cta-s h2,.cta-s p{color:var(--onb)}
+.cta-s .btn-s{background:#fff;color:var(--ink)}
+.foot-s{background:#fff;border-radius:48px 48px 0 0;box-shadow:0 -14px 28px -14px var(--sh)}
+</style>
+</head>
+<body>
+<header class="hdr-s"><div class="max-w-6xl mx-auto px-5"><nav class="nav-s" aria-label="Principal"><div class="flex items-center justify-between gap-4"><a class="brand-s" href="#inicio"><i class="bi bi-cup-hot-fill"></i><span>Taza Feliz</span></a><ul class="hidden md:flex items-center gap-8"><li><a class="nl-s" href="#inicio">Inicio</a></li><li><a class="nl-s" href="#nosotros">Nosotros</a></li><li><a class="nl-s" href="#menu">Menú</a></li><li><a class="nl-s" href="#opiniones">Opiniones</a></li><li><a class="nl-s" href="#contacto">Contacto</a></li></ul><div class="hidden md:block"><a class="btn-s" href="#contacto">Reservar mesa</a></div><div class="md:hidden"><button id="burger" class="burger-s" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><i class="bi bi-list"></i></button></div></div><div id="mobile-menu" class="hidden md:hidden mob-s"><ul><li><a class="nl-s" href="#inicio">Inicio</a></li><li><a class="nl-s" href="#nosotros">Nosotros</a></li><li><a class="nl-s" href="#menu">Menú</a></li><li><a class="nl-s" href="#opiniones">Opiniones</a></li><li><a class="nl-s" href="#contacto">Contacto</a></li></ul><div class="mt-s"><a class="btn-s" style="width:100%" href="#contacto">Reservar mesa</a></div></div></nav></div></header><main id="top"><span id="inicio"></span><section class="hero-s hero-main-s"><div class="max-w-6xl mx-auto px-5"><div class="narrow-s center-s stack-s"><h1 class="h1-s">Café, pan dulce y buen humor</h1><p class="lead-s">Bebidas coloridas, pan recién horneado y un ambiente que invita a quedarse.</p><div class="flex-s mt-s center-s"><a class="btn-s" href="#menu">Ver el menú</a><a class="btn-s2" href="#contacto">Reservar mesa</a></div><div><span class="chip-s"><i class="bi bi-clock"></i> Abierto hoy de 7:00 a 20:00</span></div></div><div class="mt-big-s"><img class="frame-s wide-img-s" src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=1400&q=80" alt="Café servido en una mesa de la cafetería"></div></div></section><section id="nosotros" class="sec-s"><div class="max-w-6xl mx-auto px-5"><div class="grid gap-12 lg:grid-cols-2 items-center"><div class=""><img class="frame-s hero-img-s" loading="lazy" src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=1000&q=80" alt="Interior de la cafetería con barra y mesas"></div><div><div class="stack-s"><h2 class="h2-s">Una cafetería de barrio con granos de origen</h2><p class="lead-s">Empezamos con una barra pequeña y pocas mesas. Hoy seguimos igual: pocos productos, buenos ingredientes y trato cercano.</p><div class="feat-s mt-s"><div class="icon-s" style="--k:var(--p1)"><i class="bi bi-cup-hot"></i></div><div><h3 class="h3-s">Granos de origen</h3><p class="muted-s">Trabajamos con pequeños productores y seleccionamos cada lote.</p></div></div><div class="feat-s"><div class="icon-s" style="--k:var(--p2)"><i class="bi bi-fire"></i></div><div><h3 class="h3-s">Tostado semanal</h3><p class="muted-s">Tostamos en tandas cortas para que llegue fresco a tu taza.</p></div></div><div class="feat-s"><div class="icon-s" style="--k:var(--p3)"><i class="bi bi-wifi"></i></div><div><h3 class="h3-s">Un lugar para quedarte</h3><p class="muted-s">Mesas amplias, wifi gratis y música suave todo el día.</p></div></div></div></div></div></div></section><section id="menu" class="sec-s sec-alt-s"><div class="max-w-6xl mx-auto px-5"><div class="head-s"><h2 class="h2-s">Nuestro menú</h2><p class="lead-s">Una carta corta con lo que mejor hacemos. Los precios incluyen impuestos.</p></div><div class="grid gap-9 sm:grid-cols-2 lg:grid-cols-3"><article class="card-s"><img class="card-img-s" loading="lazy" src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=800&q=80" alt="Taza de espresso recién servido"><div class="cb-s"><div class="row-s"><h3 class="h3-s">Espresso doble</h3><span class="price-s">$3.50</span></div><p class="muted-s">Intenso, de cuerpo denso y final dulce.</p></div></article><article class="card-s"><img class="card-img-s" loading="lazy" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Capuchino con arte latte"><div class="cb-s"><div class="row-s"><h3 class="h3-s">Capuchino</h3><span class="price-s">$4.50</span></div><p class="muted-s">Espresso, leche vaporizada y espuma sedosa.</p></div></article><article class="card-s"><img class="card-img-s" loading="lazy" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Manos sosteniendo un latte"><div class="cb-s"><div class="row-s"><h3 class="h3-s">Latte de vainilla</h3><span class="price-s">$5.00</span></div><p class="muted-s">Suave y cremoso, con un toque de vainilla natural.</p></div></article><article class="card-s"><img class="card-img-s" loading="lazy" src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=800&q=80" alt="Café frío con hielo en un vaso"><div class="cb-s"><div class="row-s"><h3 class="h3-s">Cold brew</h3><span class="price-s">$4.80</span></div><p class="muted-s">Infusionado en frío durante 18 horas, servido con hielo.</p></div></article><article class="card-s"><img class="card-img-s" loading="lazy" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80" alt="Croissant recién horneado"><div class="cb-s"><div class="row-s"><h3 class="h3-s">Croissant de mantequilla</h3><span class="price-s">$3.20</span></div><p class="muted-s">Hojaldrado y dorado, horneado cada mañana.</p></div></article><article class="card-s"><img class="card-img-s" loading="lazy" src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80" alt="Granos de café y una taza"><div class="cb-s"><div class="row-s"><h3 class="h3-s">Café de origen filtrado</h3><span class="price-s">$5.50</span></div><p class="muted-s">Lote del mes preparado en V60, con notas frutales.</p></div></article></div></div></section><section id="opiniones" class="sec-s"><div class="max-w-6xl mx-auto px-5"><div class="head-s"><h2 class="h2-s">Lo que dicen nuestros clientes</h2><p class="lead-s">Gracias a quienes vuelven cada semana por su taza favorita.</p></div><div class="grid gap-9 sm:grid-cols-2 lg:grid-cols-3"><figure class="card-s quote-s"><div class="cb-s"><div class="stars-s" aria-label="5 de 5 estrellas"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div><blockquote><p>El mejor capuchino que he probado en la zona. Siempre salgo con ganas de volver.</p></blockquote><figcaption class="who-s"><span class="avatar-s">LM</span><span><strong>Laura M.</strong><small>Cliente frecuente</small></span></figcaption></div></figure><figure class="card-s quote-s"><div class="cb-s"><div class="stars-s" aria-label="5 de 5 estrellas"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div><blockquote><p>Buen lugar para trabajar un rato: tranquilo, con wifi y un café excelente.</p></blockquote><figcaption class="who-s"><span class="avatar-s">DR</span><span><strong>Diego R.</strong><small>Cliente frecuente</small></span></figcaption></div></figure><figure class="card-s quote-s"><div class="cb-s"><div class="stars-s" aria-label="5 de 5 estrellas"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div><blockquote><p>El croissant sale calentito por la mañana. No hay mejor forma de empezar el día.</p></blockquote><figcaption class="who-s"><span class="avatar-s">CS</span><span><strong>Camila S.</strong><small>Cliente frecuente</small></span></figcaption></div></figure></div></div></section><section id="contacto" class="sec-s sec-alt-s"><div class="max-w-6xl mx-auto px-5"><div class="head-s"><h2 class="h2-s">Reserva tu mesa</h2><p class="lead-s">Escríbenos o pasa por el local. Estamos en el centro, a pasos del parque.</p></div><div class="grid gap-12 lg:grid-cols-2 items-center"><div class=""><div class="card-s"><form class="cb-s" onsubmit="event.preventDefault();this.reset();this.querySelector('.ok-s').hidden=false"><h3 class="h3-s" style="margin-bottom:1.3rem">Escríbenos</h3><div class="field-s"><label class="lbl-s" for="nombre">Nombre</label><input class="input-s" id="nombre" name="nombre" type="text" placeholder="Tu nombre" autocomplete="name" required></div><div class="field-s"><label class="lbl-s" for="correo">Correo</label><input class="input-s" id="correo" name="correo" type="email" placeholder="tu@correo.com" autocomplete="email" required></div><div class="field-s"><label class="lbl-s" for="mensaje">Mensaje</label><textarea class="input-s" id="mensaje" name="mensaje" placeholder="¿Quieres reservar una mesa o hacernos una pregunta?" required></textarea></div><button class="btn-s" type="submit"><i class="bi bi-send"></i> Enviar mensaje</button><p class="ok-s" role="status" hidden>¡Gracias! Recibimos tu mensaje y te responderemos pronto.</p></form></div></div><div><div class="card-s"><div class="cb-s"><h3 class="h3-s" style="margin-bottom:1.3rem">Visítanos</h3><div class="info-li-s"><i class="bi bi-geo-alt"></i><span>Calle Principal 123, Ciudad</span></div><div class="info-li-s"><i class="bi bi-clock"></i><span>Lunes a viernes: 7:00 – 20:00<br>Sábado y domingo: 8:00 – 21:00</span></div><div class="info-li-s"><i class="bi bi-telephone"></i><span>+00 123 456 789</span></div><div class="info-li-s"><i class="bi bi-envelope"></i><span>hola@ejemplo.com</span></div><div style="margin-top:1.6rem"><p class="muted-s" style="margin-bottom:.8rem">Síguenos en redes</p><div class="flex-s"><a class="social-s" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a class="social-s" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a class="social-s" href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a><a class="social-s" href="https://x.com" target="_blank" rel="noopener" aria-label="X"><i class="bi bi-twitter-x"></i></a><a class="social-s" href="https://wa.me" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></div></div></div></div></div></div></div></section></main><footer class="foot-s"><div class="max-w-6xl mx-auto px-5"><div class="foot-grid-s"><div class="stack-s"><a class="brand-s" href="#inicio"><i class="bi bi-cup-hot-fill"></i><span>Taza Feliz</span></a><p class="muted-s" style="max-width:22rem">Café de especialidad, pan del día y un espacio para quedarte.</p></div><div><div class="flex-s"><a class="social-s" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a class="social-s" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a class="social-s" href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a><a class="social-s" href="https://x.com" target="_blank" rel="noopener" aria-label="X"><i class="bi bi-twitter-x"></i></a><a class="social-s" href="https://wa.me" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></div></div></div><p class="muted-s foot-copy-s">© 2026 Taza Feliz. Todos los derechos reservados.</p></div></footer>
+<script>
+(function(){var b=document.getElementById('burger'),m=document.getElementById('mobile-menu');
+function set(o){b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Cerrar menú':'Abrir menú');b.firstElementChild.className='bi '+(o?'bi-x-lg':'bi-list');m.classList.toggle('hidden',!o)}
+b.addEventListener('click',function(){set(m.classList.contains('hidden'))});
+m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){set(false)})});})();
+(function(){var fb='data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect width="400" height="300" fill="#b08968"/><text x="200" y="175" font-size="90" text-anchor="middle">☕</text></svg>');document.querySelectorAll('img').forEach(function(i){var f=function(){i.onerror=null;i.src=fb};i.addEventListener('error',f);if(i.complete&&i.naturalWidth===0)f();});})();</script>
+</body>
+</html>
